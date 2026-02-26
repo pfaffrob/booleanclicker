@@ -1,0 +1,36 @@
+# Python cache/artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Packaging/build artifacts
+*.zip
+build/
+dist/
+*.egg-info/
+
+# Qt / generated UI leftovers
+*.orig
+*.rej
+
+# Test / coverage artifacts
+.coverage
+.pytest_cache/
+htmlcov/
+.tox/
+
+# IDE/editor files
+.vscode/
+.idea/
+*.code-workspace
+
+# OS-specific
+Thumbs.db
+.DS_Store
+
+# QGIS local profile noise
+*.qgs~
+*.qgz~
+
+# Sphinx built docs (keep help/source)
+help/build/
