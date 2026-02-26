@@ -1,42 +1,40 @@
 <html>
+<head>
+    <meta charset="utf-8" />
+    <title>BooleanClicker</title>
+</head>
 <body>
-<h3>Plugin Builder Results</h3>
+    <h2>BooleanClicker</h2>
 
-Congratulations! You just built a plugin for QGIS!<br/><br />
+    <p>
+        BooleanClicker is a QGIS plugin for fast point digitizing into a boolean field.
+        Left click writes <b>True</b>, right click writes <b>False</b>.
+    </p>
 
-<div id='help' style='font-size:.9em;'>
-Your plugin <b>BooleanClicker</b> was created in:<br>
-&nbsp;&nbsp;<b>C:/Users/Robin/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins\booleanclicker</b>
-<p>
-Your QGIS plugin directory is located at:<br>
-&nbsp;&nbsp;<b>C:/Users/Robin/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins</b>
-<p>
-<h3>What's Next</h3>
-<ol>
-    <li>If resources.py is not present in your plugin directory, compile the resources file using pyrcc5 (simply use <b>pb_tool</b> or <b>make</b> if you have automake)
-    <li>Optionally, test the generated sources using <b>make test</b> (or run tests from your IDE)
-    <li>Copy the entire directory containing your new plugin to the QGIS plugin directory (see Notes below)
-    <li>Test the plugin by enabling it in the QGIS plugin manager
-    <li>Customize it by editing the implementation file <b>BooleanClicker.py</b>
-    <li>Create your own custom icon, replacing the default <b>icon.png</b>
-    <li>Modify your user interface by opening <b>BooleanClicker_dialog_base.ui</b> in Qt Designer
-</ol>
-Notes:
-<ul>
-    <li>You can use <b>pb_tool</b> to compile, deploy, and manage your plugin. Tweak the <i>pb_tool.cfg</i> file included with your plugin as you add files. Install <b>pb_tool</b> using 
-        <i>pip</i> or <i>easy_install</i>. See <b>http://loc8.cc/pb_tool</b> for more information.
-    <li>You can also use the <b>Makefile</b> to compile and deploy when you
-        make changes. This requires GNU make (gmake). The Makefile is ready to use, however you 
-        will have to edit it to add addional Python source files, dialogs, and translations.
-</ul>
-</div>
-<div style='font-size:.9em;'>
-<p>
-For information on writing PyQGIS code, see <b>http://loc8.cc/pyqgis_resources</b> for a list of resources.
-</p>
-</div>
-<p>
-&copy;2011-2019 GeoApt LLC - geoapt.com 
-</p>
+    <h3>Features</h3>
+    <ul>
+        <li>Target layer list only shows point layers with at least one boolean field.</li>
+        <li>Snapping-aware point placement (uses current QGIS snapping settings).</li>
+        <li>Live preview marker while moving the mouse.</li>
+        <li>Optional map recentering after insertion with configurable horizontal and vertical target position.</li>
+        <li>Remembers last selected layer, field, and recenter settings.</li>
+    </ul>
+
+    <h3>How to Use</h3>
+    <ol>
+        <li>Enable the plugin in QGIS Plugin Manager.</li>
+        <li>Click the BooleanClicker toolbar button.</li>
+        <li>Select a target point layer and boolean field.</li>
+        <li>(Optional) Enable recentering and choose horizontal/vertical target position.</li>
+        <li>Click <b>OK</b> to activate the tool.</li>
+        <li>Left click to add True, right click to add False.</li>
+    </ol>
+
+    <h3>Notes</h3>
+    <ul>
+        <li>The plugin starts an edit session automatically when needed.</li>
+        <li>Save layer edits from QGIS when you finish digitizing.</li>
+        <li>For icon/resource updates, rebuild <b>resources.py</b> from <b>resources.qrc</b>.</li>
+    </ul>
 </body>
 </html>
